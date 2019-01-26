@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class OpenDrawer : MonoBehaviour
 {
-    // Start is called before the first frame update
+    bool opening;
+    bool closing;
+
     void Start()
     {
-        
+        if (opening)
+        {
+
+        } else if()
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+
 }
