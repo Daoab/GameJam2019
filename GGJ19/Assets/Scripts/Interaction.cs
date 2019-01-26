@@ -9,6 +9,7 @@ public class Interaction : MonoBehaviour {
     public UnityEvent OnSelected;
     public UnityEvent OnLeave;
     public UnityEvent OnInteract;
+    public UnityEvent OnSuccessInteract;
     #endregion
 
     #region References
@@ -67,6 +68,7 @@ public class Interaction : MonoBehaviour {
         playerInteractor.PlayCorrectSound();
         used = true;
         Debug.Log("<Color=blue>Used " + name + "</Color>");
+        OnSuccessInteract.Invoke();
         if (oneTime) {
             OnLeave.Invoke();
             playerInteractor.closestInteraction = null;

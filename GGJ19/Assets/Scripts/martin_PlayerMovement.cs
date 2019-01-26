@@ -15,6 +15,8 @@ public class martin_PlayerMovement : MonoBehaviour
     void Start()
     {
         rigidBody = gameObject.GetComponent<Rigidbody>();
+        
+        //Cursor.lockState = CursorLockMode.None;
     }
 
     void Update()
