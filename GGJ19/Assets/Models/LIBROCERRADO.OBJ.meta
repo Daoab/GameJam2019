@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 3b5d1bb74c5f7fd4bb74a352251a160f
+guid: 8bd40254666e124419de40dbf45a6272
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: ZBrush_defualt_group
-    400000: //RootNode
-    400002: ZBrush_defualt_group
-    2100000: ZBrush_defualt_groupMat
-    2300000: ZBrush_defualt_group
-    3300000: ZBrush_defualt_group
-    4300000: ZBrush_defualt_group
+    100000: Group62332
+    100002: //RootNode
+    400000: Group62332
+    400002: //RootNode
+    2100000: Group62332Mat
+    2300000: Group62332
+    3300000: Group62332
+    4300000: Group62332
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
