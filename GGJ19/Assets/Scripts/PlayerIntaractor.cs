@@ -12,6 +12,9 @@ public class PlayerIntaractor : MonoBehaviour {
     public KeyCode interactionKey1 = KeyCode.E;
     public KeyCode interactionKey2 = KeyCode.Mouse0;
     public List<int> itemGot;
+
+    public float interactionDistance = 1;
+    public LayerMask interactableMask;
     #endregion
 
     #region References
@@ -63,11 +66,13 @@ public class PlayerIntaractor : MonoBehaviour {
     }
 
     public void OnTriggerEnter(Collider other) {
-        if (other.CompareTag(interactableTagName)) {
-            Interaction interaction = other.GetComponent<Interaction>();
-            if (!closeInteractions.Contains(interaction) && !(interaction.used && interaction.oneTime)) {
-                closeInteractions.Add(interaction);
-                interaction.OnGetClose.Invoke();
+        if (other.CompareTag(interactableTagName)) { //tag de interactuable
+            if (Physics.Raycast(transform.position, (other.transform.position - transform.position), interactableMask)) {
+                Interaction interaction = other.GetComponent<Interaction>();
+                if (!closeInteractions.Contains(interaction) && !(interaction.used && interaction.oneTime)) { //no conocidoy no usado
+                    closeInteractions.Add(interaction);
+                    interaction.OnGetClose.Invoke();
+                }
             }
         }
     }
@@ -83,13 +88,17 @@ public class PlayerIntaractor : MonoBehaviour {
     }
 
     public void PlayCorrectSound() {
-        audioSource.Stop();
+        if (audioSource.isPlaying) {
+            return;
+        }
         if (correctSound != null) audioSource.clip = correctSound;
         audioSource.Play();
     }
 
     public void PlayWrongSound() {
-        audioSource.Stop();
+        if (audioSource.isPlaying) {
+            return;
+        }
         if (wrongSound != null) audioSource.clip = wrongSound;
         audioSource.Play();
     }

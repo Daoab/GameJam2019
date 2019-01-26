@@ -12,9 +12,8 @@ public class TotalLightsChange : MonoBehaviour
     void Start()
     {
         groupsOfLights = GetComponentsInChildren<GroupLightsChange>(true);
-        FadeAllLights(3.0f, 2.0f);  //quitable
     }
-    void FadeAllLights(float time = 0.0f, float fade = 2.0f)
+    public void FadeAllLights(float time = 0.0f, float fade = 2.0f)
     {
         waitingTime = time;
         fadeTime = fade;
@@ -26,9 +25,7 @@ public class TotalLightsChange : MonoBehaviour
         foreach(GroupLightsChange g in groupsOfLights)
         {
             g.Fade(fadeTime);
-            Debug.Log("fading");
         }
-        FadeAllLights(3.0f, 2.0f); //quitable
     }
 
     
