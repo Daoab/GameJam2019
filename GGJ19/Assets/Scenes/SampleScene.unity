@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c696135c23943ba419f56016f33c4b2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repeat: 1
+  repeat: 0
 --- !u!1 &407493882
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,6 +799,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549657205092984959, guid: 0590b494984d38d4caf7894bcab531d6,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0590b494984d38d4caf7894bcab531d6, type: 3}

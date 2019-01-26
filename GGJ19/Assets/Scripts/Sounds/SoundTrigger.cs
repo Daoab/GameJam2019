@@ -23,7 +23,7 @@ public class SoundTrigger : MonoBehaviour
             } else
             {
                 SoundToPlay.Play();
-                GameObject.Destroy(this);
+                GetComponent<BoxCollider>().enabled = false;
             }
         }
     }
