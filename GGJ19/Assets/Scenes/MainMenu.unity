@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e5c76c493822dc40b21ecb93352b0aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: Martin
+  gameSceneName: GameScene
   controlsImage: {fileID: 200044701}
   backButton: {fileID: 1904550591}
 --- !u!4 &1583030820
