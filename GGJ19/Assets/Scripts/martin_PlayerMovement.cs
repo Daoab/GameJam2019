@@ -28,8 +28,6 @@ public class martin_PlayerMovement : MonoBehaviour
         xThrow = Input.GetAxisRaw("Horizontal");
         yThrow = Input.GetAxisRaw("Vertical");
 
-        Debug.Log(yThrow);
-
         Vector3 forwardMovement = calculateForwardMovement();
 
         rigidBody.velocity = ((xThrow * transform.right).normalized + forwardMovement.normalized) * movementSpeed;

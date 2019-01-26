@@ -21,14 +21,17 @@ public class Interaction : MonoBehaviour {
     public bool used;
     public List<int> prerequisites;
     #endregion
+    [SerializeField]TotalLightsChange lightsChangeObj;
+    [SerializeField] float transitionTime;
 
-    void Start() {
+    protected virtual void Start() {
         playerInteractor = FindObjectOfType<PlayerIntaractor>();
 
-        OnGetClose.AddListener(GetClose);
-        OnLeave.AddListener(GetFar);
-        OnSelected.AddListener(Selected);
+        //OnGetClose.AddListener(GetClose);
+        //OnLeave.AddListener(GetFar);
+        //OnSelected.AddListener(Selected);
         OnInteract.AddListener(Interact);
+        lightsChangeObj = GetComponentInChildren<TotalLightsChange>();
     }
 
     void Update() {
@@ -41,6 +44,7 @@ public class Interaction : MonoBehaviour {
 
     public void Selected() {
         GetComponent<MeshRenderer>().material.color = hightightedColor;
+
     }
 
     public void GetFar() {
@@ -68,5 +72,7 @@ public class Interaction : MonoBehaviour {
             playerInteractor.closestInteraction = null;
             playerInteractor.closeInteractions.Remove(this);
         }
+
+        lightsChangeObj.FadeAllLights(0.0f, transitionTime);
     }
 }
