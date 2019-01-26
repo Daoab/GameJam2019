@@ -1,16 +1,64 @@
 fileFormatVersion: 2
-guid: 74b8bddff7c157e4f9f6d9c78f99993d
+guid: 991a902e2e6890c42904d9d9f976e7df
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Group9386
-    100002: //RootNode
-    400000: Group9386
-    400002: //RootNode
-    2100000: Group9386Mat
-    2300000: Group9386
-    3300000: Group9386
-    4300000: Group9386
+    100000: Group1
+    100002: Group19413
+    100004: Group2
+    100006: Group3
+    100008: Group4
+    100010: Mesh01
+    100012: Mesh02
+    100014: Model
+    100016: //RootNode
+    100018: pasillo1
+    100020: techo2_1
+    400000: Group1
+    400002: Group19413
+    400004: Group2
+    400006: Group3
+    400008: Group4
+    400010: Mesh01
+    400012: Mesh02
+    400014: Model
+    400016: //RootNode
+    400018: pasillo1
+    400020: techo2_1
+    2100000: default
+    2100002: FrontCol
+    2100004: Transluc
+    2100006: Foregrou
+    2300000: Group1
+    2300002: Group19413
+    2300004: Group2
+    2300006: Group3
+    2300008: Group4
+    2300010: Mesh01
+    2300012: Mesh02
+    2300014: Model
+    2300016: pasillo1
+    2300018: techo2_1
+    3300000: Group1
+    3300002: Group19413
+    3300004: Group2
+    3300006: Group3
+    3300008: Group4
+    3300010: Mesh01
+    3300012: Mesh02
+    3300014: Model
+    3300016: pasillo1
+    3300018: techo2_1
+    4300000: Group19413
+    4300002: Model
+    4300004: pasillo1
+    4300006: Group1
+    4300008: Group2
+    4300010: Group3
+    4300012: Mesh01
+    4300014: Mesh02
+    4300016: Group4
+    4300018: techo2_1
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
