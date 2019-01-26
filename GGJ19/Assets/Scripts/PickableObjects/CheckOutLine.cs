@@ -27,7 +27,7 @@ public class CheckOutLine : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("w")) EnableOrDisableOutLine(); //Quitable
+        //if (Input.GetKeyDown("w")) EnableOrDisableOutLine(); //Quitable
     }
 
     public void EnableOrDisableOutLine()

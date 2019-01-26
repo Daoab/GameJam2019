@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Interaction : MonoBehaviour {
     #region Events
-    [HideInInspector] public UnityEvent OnGetClose;
-    [HideInInspector] public UnityEvent OnSelected;
-    [HideInInspector] public UnityEvent OnLeave;
+    public UnityEvent OnGetClose;
+    public UnityEvent OnSelected;
+    public UnityEvent OnLeave;
     public UnityEvent OnInteract;
     #endregion
 
