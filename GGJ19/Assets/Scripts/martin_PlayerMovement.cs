@@ -25,14 +25,30 @@ public class martin_PlayerMovement : MonoBehaviour
 
     void movePlayer()
     {
-        rigidBody.velocity = new Vector3(0, 0, 0);
+        xThrow = Input.GetAxisRaw("Horizontal");
+        yThrow = Input.GetAxisRaw("Vertical");
 
-        xThrow = Input.GetAxis("Horizontal");
-        yThrow = Input.GetAxis("Vertical");
+        Debug.Log(yThrow);
 
-        Vector3 forwardMovement = Vector3.ProjectOnPlane((yThrow * transform.forward), Vector3.up);
+        Vector3 forwardMovement = calculateForwardMovement();
 
         rigidBody.velocity = ((xThrow * transform.right).normalized + forwardMovement.normalized) * movementSpeed;
+    }
+
+    Vector3 calculateForwardMovement()
+    {
+        RaycastHit hit;
+        Vector3 planeNormal = Vector3.zero;
+
+        int mask = LayerMask.GetMask("Default");
+
+        if(Physics.Raycast(transform.position, Vector3.down, out hit, 1, mask))
+        {
+            planeNormal = hit.normal;
+        }
+
+        Vector3 forwardMovement = Vector3.ProjectOnPlane((yThrow * transform.forward), planeNormal);
+        return forwardMovement;
     }
 
     void rotatePlayer()
