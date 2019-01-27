@@ -15,7 +15,7 @@ MonoBehaviour:
   OnGetClose:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8119495319352361260}
+      - m_Target: {fileID: 0}
         m_MethodName: EnableOrDisableOutLine
         m_Mode: 1
         m_Arguments:
@@ -36,7 +36,7 @@ MonoBehaviour:
   OnLeave:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8119495319352361260}
+      - m_Target: {fileID: 0}
         m_MethodName: EnableOrDisableOutLine
         m_Mode: 1
         m_Arguments:
@@ -54,11 +54,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  OnSuccessInteract:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   playerInteractor: {fileID: 0}
   hightightedColor: {r: 0, g: 0, b: 0, a: 0}
   oneTime: 0
   used: 0
   prerequisites: 
+  lightsChangeObj: {fileID: 8361925077106944630}
+  transitionTime: 0
   objectCode: 0
 --- !u!1001 &8361925076581026036
 PrefabInstance:
@@ -70,7 +77,7 @@ PrefabInstance:
     - target: {fileID: 334879856841640414, guid: 85d80de4e6fc74e4181b19ab1c3c34fa,
         type: 3}
       propertyPath: m_Name
-      value: Collectable
+      value: Collectable Variant
       objectReference: {fileID: 0}
     - target: {fileID: 334879856841640411, guid: 85d80de4e6fc74e4181b19ab1c3c34fa,
         type: 3}
@@ -131,13 +138,15 @@ PrefabInstance:
         type: 3}
       propertyPath: OnGetClose.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8119495319352361260}
+      objectReference: {fileID: 0}
     - target: {fileID: 334879856841640415, guid: 85d80de4e6fc74e4181b19ab1c3c34fa,
         type: 3}
       propertyPath: OnLeave.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8119495319352361260}
-    m_RemovedComponents: []
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 334879856841640415, guid: 85d80de4e6fc74e4181b19ab1c3c34fa, type: 3}
+    - {fileID: 614618805, guid: 85d80de4e6fc74e4181b19ab1c3c34fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 85d80de4e6fc74e4181b19ab1c3c34fa, type: 3}
 --- !u!1 &8119495319352361258 stripped
 GameObject:
@@ -145,15 +154,15 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8361925076581026036}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8119495319352361260 stripped
+--- !u!114 &8361925077106944630 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 334879856841640408, guid: 85d80de4e6fc74e4181b19ab1c3c34fa,
+  m_CorrespondingSourceObject: {fileID: 661185154, guid: 85d80de4e6fc74e4181b19ab1c3c34fa,
     type: 3}
   m_PrefabInstance: {fileID: 8361925076581026036}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8119495319352361258}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27db9415114b37b40be54081c9d99720, type: 3}
+  m_Script: {fileID: 11500000, guid: f4a1e3e3539625c44ae638a5bb38b8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

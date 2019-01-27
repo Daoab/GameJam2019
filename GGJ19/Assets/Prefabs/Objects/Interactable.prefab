@@ -413,12 +413,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  OnSuccessInteract:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
   playerInteractor: {fileID: 0}
   hightightedColor: {r: 1, g: 0.042452812, b: 0.042452812, a: 1}
   oneTime: 0
   used: 0
-  prerequisites: 00000000
-  lightsChangeObj: {fileID: 0}
+  prerequisites: 
+  lightsChangeObj: {fileID: 661185154}
   transitionTime: 1
 --- !u!65 &614618806
 BoxCollider:

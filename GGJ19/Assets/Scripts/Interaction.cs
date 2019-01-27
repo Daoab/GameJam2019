@@ -75,6 +75,6 @@ public class Interaction : MonoBehaviour {
             playerInteractor.closeInteractions.Remove(this);
         }
 
-        lightsChangeObj.FadeAllLights(0.0f, transitionTime);
+        if (lightsChangeObj != null) lightsChangeObj.FadeAllLights(0.0f, transitionTime);
     }
 }

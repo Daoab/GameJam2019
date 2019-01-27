@@ -11,16 +11,23 @@ public class martin_PlayerMovement : MonoBehaviour
     float xThrow, yThrow;
 
     float mouseX, mouseY;
+    float lastMouseX, lastMouseY;
+    public float sensitivity = 15.0f;
+    float rotationX = 0;
+    float rotationY = 0;
 
     void Start()
     {
+        Cursor.visible = false;
         rigidBody = gameObject.GetComponent<Rigidbody>();
         
-        //Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
+        lastMouseX = 0;
+        lastMouseY = 0;
         movePlayer();
         rotatePlayer();
     }
@@ -31,8 +38,9 @@ public class martin_PlayerMovement : MonoBehaviour
         yThrow = Input.GetAxisRaw("Vertical");
 
         Vector3 forwardMovement = calculateForwardMovement();
-
+        float auxY = rigidBody.velocity.y;
         rigidBody.velocity = ((xThrow * transform.right).normalized + forwardMovement.normalized) * movementSpeed;
+        rigidBody.velocity = new Vector3(rigidBody.velocity.x, auxY, rigidBody.velocity.z);
     }
 
     Vector3 calculateForwardMovement()
@@ -53,14 +61,18 @@ public class martin_PlayerMovement : MonoBehaviour
 
     void rotatePlayer()
     {
-        mouseX = Camera.main.ScreenToViewportPoint(Input.mousePosition).x;
-        mouseY = Camera.main.ScreenToViewportPoint(Input.mousePosition).y;
+        mouseX = Input.GetAxis("Mouse X") * sensitivity;
+        mouseY = Input.GetAxis("Mouse Y") * sensitivity;
 
-        float angleX = Mathf.Lerp(-360, 360, mouseX);
-        float angleY = Mathf.Lerp(-75, 75, mouseY);
+        rotationX += mouseX - lastMouseX;
+        rotationY -= mouseY - lastMouseY;
+        rotationY = Mathf.Clamp(rotationY, -75, 75);
 
-        rigidBody.rotation = Quaternion.Euler(0, angleX, 0);
+        rigidBody.rotation = Quaternion.Euler(0, rotationX, 0);
 
-        camera.transform.rotation = Quaternion.Euler(-angleY, angleX, 0);
+        camera.transform.rotation = Quaternion.Euler(rotationY, rotationX, 0);
+
+        lastMouseX = mouseX;
+        lastMouseY = mouseY;
     }
 }
