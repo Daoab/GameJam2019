@@ -10,6 +10,11 @@ public class martin_GameManager : MonoBehaviour
     public GameObject controlsImage;
     public GameObject backButton;
 
+    public void Start()
+    {
+        Cursor.visible = true;
+    }
+
     public void showControls()
     {
         controlsImage.SetActive(true);

@@ -69,6 +69,8 @@ public class Interaction : MonoBehaviour {
         used = true;
         Debug.Log("<Color=blue>Used " + name + "</Color>");
         OnSuccessInteract.Invoke();
+        SuccessInteraction();
+
         if (oneTime) {
             OnLeave.Invoke();
             playerInteractor.closestInteraction = null;
@@ -76,5 +78,10 @@ public class Interaction : MonoBehaviour {
         }
 
         if (lightsChangeObj != null) lightsChangeObj.FadeAllLights(0.0f, transitionTime);
+    }
+
+    public virtual void SuccessInteraction()
+    {
+
     }
 }

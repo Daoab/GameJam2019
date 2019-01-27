@@ -12,8 +12,13 @@ public class CollectableInteractable : Interaction {
 
     public override void Interact() {
         base.Interact();
+        
+        //gameObject.SetActive(false);
+    }
+
+    public override void SuccessInteraction ()
+    {
         if (!playerInteractor.itemGot.Contains(objectCode))
             playerInteractor.itemGot.Add(objectCode);
-        //gameObject.SetActive(false);
     }
 }
