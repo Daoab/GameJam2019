@@ -14,6 +14,6 @@ public class CollectableInteractable : Interaction {
         base.Interact();
         if (!playerInteractor.itemGot.Contains(objectCode))
             playerInteractor.itemGot.Add(objectCode);
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 }
